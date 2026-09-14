@@ -1,0 +1,143 @@
+<!DOCTYPE html><!DOCTYPE html
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact - Joselito</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            color: #333;
+            text-align: center;
+        }
+
+        nav {
+            background: #1565c0;
+            padding: 16px 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 8px;
+            font-weight: bold;
+            font-size: 17px;
+        }
+
+        .carte {
+            background: white;
+            max-width: 550px;
+            margin: 40px auto;
+            padding: 30px 20px;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        }
+
+        h1 {
+            color: #1565c0;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        form {
+            margin-top: 25px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 14px;
+            margin: 10px 0;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        form button {
+            padding: 14px 25px;
+            background: #1565c0;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .email {
+            display: inline-block;
+            margin: 20px 0;
+            padding: 14px 20px;
+            background: #1565c0;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+
+        .retour {
+            display: block;
+            margin-top: 20px;
+            color: #1565c0;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <a href="index.html">🏠 Accueil</a>
+        <a href="apropos.html">👤 À propos</a>
+        <a href="contact.html">📞 Contact</a>
+    </nav>
+
+    <div class="carte">
+
+        <h1>📞 Contact</h1>
+
+        <p>Merci de visiter mon premier site web !</p>
+
+        <p>Vous pouvez me contacter par e-mail :</p>
+
+        <form action="https://formspree.io/f/mdeorloo" method="post">
+
+            <input type="text" name="name" placeholder="Votre nom" required>
+
+            <input type="email" name="email" placeholder="Votre e-mail" required>
+
+            <textarea name="message" placeholder="Votre message" rows="6" required></textarea>
+
+            <button type="submit">📩 Envoyer</button>
+
+        </form>
+
+        <a class="email" href="mailto:joselitonambinitsoa@gmail.com">
+            ✉️ Envoyer un e-mail
+        </a>
+
+        <p>📧 joselitonambinitsoa@gmail.com</p>
+
+        <a class="retour" href="index.html">
+            🏠 Retour à l'accueil
+        </a>
+
+    </div>
+
+</body>
+</html>
