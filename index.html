@@ -1,22 +1,12 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Portfolio de Joselito</title>
 
-    <style>.photo-profil {
-    width: 180px;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 50%;
-    display: block;
-    margin: 20px auto;
-    border: 5px solid #1565c0;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-}
+    <style>
         * {
             box-sizing: border-box;
         }
@@ -39,7 +29,7 @@
             text-decoration: none;
             margin: 0 8px;
             font-weight: bold;
-            font-size: 17px;
+            font-size: 16px;
         }
 
         nav a:hover {
@@ -56,33 +46,49 @@
             box-shadow: 0 5px 20px rgba(0,0,0,0.15);
         }
 
-        .hero h1 {
+        h1 {
             color: #1565c0;
-            font-size: 38px;
+            font-size: 36px;
             margin-bottom: 10px;
         }
 
-        .hero h2 {
-            font-size: 25px;
-            margin: 10px 0;
+        h2 {
+            color: #1565c0;
+            text-align: center;
+            font-size: 30px;
+            margin-top: 60px;
+        }
+
+        .hero h3 {
+            font-size: 26px;
+            margin: 10px 0 20px;
+        }
+
+        .photo-profil {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 50%;
+            display: block;
+            margin: 20px auto;
+            border: 5px solid #1565c0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
 
         .hero p {
-            color: #555;
             font-size: 18px;
             line-height: 1.6;
         }
 
         .bouton {
             display: inline-block;
-            margin-top: 15px;
-            padding: 13px 25px;
             background: #1565c0;
             color: white;
             text-decoration: none;
+            padding: 14px 25px;
             border-radius: 10px;
-            font-size: 17px;
             font-weight: bold;
+            margin-top: 15px;
         }
 
         .bouton:hover {
@@ -90,57 +96,80 @@
         }
 
         .section {
-            max-width: 900px;
-            margin: 30px auto;
-            padding: 20px;
-            text-align: center;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
 
-        .section h2 {
-            color: #1565c0;
-            font-size: 30px;
+        .cartes {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-top: 25px;
         }
 
-        .competences {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 15px;
-        }
-
-        .competence {
+        .carte {
             background: white;
-            padding: 20px;
-            width: 150px;
+            padding: 25px 20px;
             border-radius: 15px;
-            box-shadow: 0 3px 12px rgba(0,0,0,0.12);
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .carte h3 {
+            color: #1565c0;
+            font-size: 21px;
+        }
+
+        .carte p {
+            line-height: 1.5;
+        }
+
+        .prix {
+            font-size: 20px;
             font-weight: bold;
+            color: #1565c0;
+        }
+
+        .projet {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin-top: 25px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .contact {
+            text-align: center;
+            margin: 60px auto;
+            padding: 20px;
         }
 
         footer {
-            margin-top: 40px;
-            padding: 20px;
             background: #1565c0;
             color: white;
             text-align: center;
+            padding: 25px;
+            margin-top: 50px;
         }
 
         @media (max-width: 600px) {
-            .hero {
-                margin: 20px 12px;
-            }
-
-            .hero h1 {
-                font-size: 32px;
-            }
-
             nav a {
-                font-size: 15px;
+                font-size: 14px;
                 margin: 0 4px;
             }
 
-            .competence {
-                width: 130px;
+            h1 {
+                font-size: 30px;
+            }
+
+            h2 {
+                font-size: 26px;
+            }
+
+            .hero h3 {
+                font-size: 22px;
             }
         }
     </style>
@@ -156,12 +185,18 @@
     </nav>
 
 
-    <!-- PRESENTATION -->
-    <div class="hero">
+    <!-- ACCUEIL -->
+    <section class="hero">
 
         <h1>Bonjour 👋</h1>
 
-        <h2>Je m'appelle Joselito</h2><img src="photo.jpg" alt="Ma photo" class="photo-profil">
+        <h3>Je m'appelle Joselito</h3>
+
+        <img
+            src="photo.jpg"
+            alt="Photo de Joselito"
+            class="photo-profil"
+        >
 
         <p>
             Je suis débutant en développement web.
@@ -170,91 +205,185 @@
         </p>
 
         <p>
-            🚀 Je construis mon avenir, une ligne de code à la fois.
+            🚀 Je construis mon avenir,
+            une ligne de code à la fois.
         </p>
 
-        <a class="bouton" href="apropos.html">
+        <a href="apropos.html" class="bouton">
             👤 Découvrir mon profil
         </a>
 
-    </div>
+    </section>
 
 
-    <!-- COMPETENCES -->
-    <div class="section">
+    <!-- COMPÉTENCES -->
+    <section class="section">
 
         <h2>💻 Mes compétences</h2>
 
-        <div class="competences">
+        <div class="cartes">
 
-            <div class="competence">
-                🌐 HTML
+            <div class="carte">
+                <h3>🌐 HTML</h3>
+                <p>
+                    Je sais créer la structure
+                    d'une page web.
+                </p>
             </div>
 
-            <div class="competence">
-                🎨 CSS
+            <div class="carte">
+                <h3>🎨 CSS</h3>
+                <p>
+                    Je sais améliorer le design
+                    et l'apparence d'un site.
+                </p>
             </div>
 
-            <div class="competence">
-                ⚡ JavaScript
+            <div class="carte">
+                <h3>⚡ JavaScript</h3>
+                <p>
+                    J'apprends à rendre les sites
+                    interactifs.
+                </p>
             </div>
 
-            <div class="competence">
-                📱 Web mobile
+            <div class="carte">
+                <h3>📱 Web mobile</h3>
+                <p>
+                    Je crée des pages adaptées
+                    aux téléphones.
+                </p>
             </div>
 
         </div>
 
-    </div>
+    </section>
+
+
+    <!-- SERVICES -->
+    <section class="section">
+
+        <h2>💼 Mes services</h2>
+
+        <div class="cartes">
+
+            <div class="carte">
+                <h3>🌐 Site vitrine</h3>
+                <p>
+                    Création d'un site simple
+                    pour présenter une activité,
+                    une entreprise ou un projet.
+                </p>
+                <p class="prix">
+                    À partir de 50 000 Ar
+                </p>
+            </div>
+
+            <div class="carte">
+                <h3>📱 Site mobile</h3>
+                <p>
+                    Site adapté aux téléphones
+                    pour que vos clients puissent
+                    facilement le consulter.
+                </p>
+                <p class="prix">
+                    À partir de 50 000 Ar
+                </p>
+            </div>
+
+            <div class="carte">
+                <h3>🏪 Site pour commerce</h3>
+                <p>
+                    Présentation d'une boutique,
+                    de ses produits, horaires
+                    et informations.
+                </p>
+                <p class="prix">
+                    À partir de 70 000 Ar
+                </p>
+            </div>
+
+            <div class="carte">
+                <h3>🍽️ Site restaurant</h3>
+                <p>
+                    Présentation du restaurant,
+                    menu, photos, adresse
+                    et contact.
+                </p>
+                <p class="prix">
+                    À partir de 70 000 Ar
+                </p>
+            </div>
+
+        </div>
+
+    </section>
 
 
     <!-- PROJETS -->
-    <div class="section">
+    <section class="section">
 
         <h2>🛠️ Mes projets</h2>
 
-        <p>
-            Je suis actuellement en train de construire
-            mes premiers projets web.
-        </p>
+        <div class="projet">
 
-        <p>
-            🚧 D'autres projets arriveront bientôt !
-        </p>
+            <h3>🌐 Mon premier portfolio</h3>
 
-    </div>
+            <p>
+                Création de mon premier site web
+                avec HTML, CSS et JavaScript.
+            </p>
+
+            <a href="index.html" class="bouton">
+                👀 Voir le projet
+            </a>
+
+        </div>
+
+        <div class="projet">
+
+            <h3>🚀 D'autres projets arrivent bientôt !</h3>
+
+            <p>
+                Je continue à apprendre et à créer
+                de nouveaux projets web.
+            </p>
+
+        </div>
+
+    </section>
 
 
     <!-- CONTACT -->
-    <div class="section">
+    <section class="contact">
 
         <h2>📞 Me contacter</h2>
 
         <p>
-            Vous voulez me contacter ?
+            Vous souhaitez créer un site web
+            pour votre activité ?
         </p>
 
-        <a class="bouton" href="contact.html">
-            ✉️ Contactez-moi
+        <a href="contact.html" class="bouton">
+            📩 Demander un site
         </a>
 
-    </div>
+    </section>
 
 
     <!-- PIED DE PAGE -->
     <footer>
-        © 2026 Joselito - Mon premier portfolio
+
+        <p>
+            © 2026 Joselito - Développeur web débutant
+        </p>
+
+        <p>
+            🚀 Je construis mon avenir,
+            une ligne de code à la fois.
+        </p>
+
     </footer>
 
 </body>
-
-</html></style>.photo-profil {
-    width: 180px;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 50%;
-    display: block;
-    margin: 20px auto;
-    border: 5px solid #1565c0;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-}
+    </html>
